@@ -1,0 +1,168 @@
+\doxysection{src/calculatorapp/src/calculatorapp.cpp File Reference}
+\hypertarget{calculatorapp_8cpp}{}\label{calculatorapp_8cpp}\index{src/calculatorapp/src/calculatorapp.cpp@{src/calculatorapp/src/calculatorapp.cpp}}
+
+
+Monte Carlo Pi calculation and visualization application.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}../../calculator/header/calculator.\+h"{}}\newline
+Include dependency graph for calculatorapp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{calculatorapp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_performance_result}{Performance\+Result}}
+\begin{DoxyCompactList}\small\item\em Structure to hold performance results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{calculatorapp_8cpp_a86f0089f092c1735d3183401c7824427}{print\+Results}} (double pi, double actual\+Pi, double error, double time)
+\begin{DoxyCompactList}\small\item\em Prints the results of a Pi calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_performance_result}{Performance\+Result}} \mbox{\hyperlink{calculatorapp_8cpp_a043e8efaabec294fd71f8ffebbc6f6ce}{run\+Sequential\+Test}} (int num\+Points)
+\begin{DoxyCompactList}\small\item\em Runs a sequential Pi calculation test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_performance_result}{Performance\+Result}} \mbox{\hyperlink{calculatorapp_8cpp_aeda979de8e91f095f8556f4ad20fbe8d}{run\+Parallel\+Test}} (int num\+Points, int num\+Threads)
+\begin{DoxyCompactList}\small\item\em Runs a parallel Pi calculation test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{calculatorapp_8cpp_aa5739e9358f4e4ca33861a6caa0047d8}{run\+Convergence\+Test}} (int num\+Points)
+\begin{DoxyCompactList}\small\item\em Runs a convergence test for Pi calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{calculatorapp_8cpp_aadaaf41e57641a5e410728952cefdd13}{run\+Performance\+Analysis}} ()
+\begin{DoxyCompactList}\small\item\em Runs a comprehensive performance analysis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{calculatorapp_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Monte Carlo Pi calculation and visualization application. 
+
+This application demonstrates the use of the Monte Carlo method for calculating Pi. It includes both sequential and parallel implementations, and provides performance analysis and visualization of the results.
+
+The application performs the following tasks\+:
+\begin{DoxyEnumerate}
+\item Sequential Pi calculation with different point counts
+\item Parallel Pi calculation with different thread counts
+\item Convergence analysis of Pi approximation
+\item Performance analysis and speedup calculation
+\item Visualization of results through CSV files 
+\end{DoxyEnumerate}
+
+\doxysubsection{Function Documentation}
+\Hypertarget{calculatorapp_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{calculatorapp.cpp@{calculatorapp.cpp}!main@{main}}
+\index{main@{main}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+This is the entry point of the application. It runs the sequential test, parallel test, convergence test, and performance analysis.
+
+\begin{DoxyReturn}{Returns}
+0 on successful execution 
+\end{DoxyReturn}
+\Hypertarget{calculatorapp_8cpp_a86f0089f092c1735d3183401c7824427}\index{calculatorapp.cpp@{calculatorapp.cpp}!printResults@{printResults}}
+\index{printResults@{printResults}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{printResults()}{printResults()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_a86f0089f092c1735d3183401c7824427} 
+void print\+Results (\begin{DoxyParamCaption}\item[{double}]{pi}{, }\item[{double}]{actual\+Pi}{, }\item[{double}]{error}{, }\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Prints the results of a Pi calculation. 
+
+This function prints the calculated Pi value, actual Pi value, error percentage, and execution time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pi} & Calculated Pi value \\
+\hline
+{\em actual\+Pi} & Actual Pi value (M\+\_\+\+PI) \\
+\hline
+{\em error} & Error percentage \\
+\hline
+{\em time} & Execution time in seconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{calculatorapp_8cpp_aa5739e9358f4e4ca33861a6caa0047d8}\index{calculatorapp.cpp@{calculatorapp.cpp}!runConvergenceTest@{runConvergenceTest}}
+\index{runConvergenceTest@{runConvergenceTest}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{runConvergenceTest()}{runConvergenceTest()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_aa5739e9358f4e4ca33861a6caa0047d8} 
+void run\+Convergence\+Test (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{}\end{DoxyParamCaption})}
+
+
+
+Runs a convergence test for Pi calculation. 
+
+This function analyzes how the Pi approximation converges as more points are processed. It calculates Pi approximations at regular intervals and saves the results to a CSV file for visualization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to use in the calculation \\
+\hline
+\end{DoxyParams}
+\Hypertarget{calculatorapp_8cpp_aeda979de8e91f095f8556f4ad20fbe8d}\index{calculatorapp.cpp@{calculatorapp.cpp}!runParallelTest@{runParallelTest}}
+\index{runParallelTest@{runParallelTest}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{runParallelTest()}{runParallelTest()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_aeda979de8e91f095f8556f4ad20fbe8d} 
+\mbox{\hyperlink{struct_performance_result}{Performance\+Result}} run\+Parallel\+Test (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{, }\item[{int}]{num\+Threads}{}\end{DoxyParamCaption})}
+
+
+
+Runs a parallel Pi calculation test. 
+
+This function performs a parallel Pi calculation with the specified number of points and threads, and measures the execution time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to use in the calculation \\
+\hline
+{\em num\+Threads} & Number of threads to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_performance_result}{Performance\+Result} containing the test results 
+\end{DoxyReturn}
+\Hypertarget{calculatorapp_8cpp_aadaaf41e57641a5e410728952cefdd13}\index{calculatorapp.cpp@{calculatorapp.cpp}!runPerformanceAnalysis@{runPerformanceAnalysis}}
+\index{runPerformanceAnalysis@{runPerformanceAnalysis}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{runPerformanceAnalysis()}{runPerformanceAnalysis()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_aadaaf41e57641a5e410728952cefdd13} 
+void run\+Performance\+Analysis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs a comprehensive performance analysis. 
+
+This function performs a comprehensive performance analysis by running both sequential and parallel tests with different point counts and thread counts. It calculates the speedup for each configuration and saves the results to a CSV file for visualization. \Hypertarget{calculatorapp_8cpp_a043e8efaabec294fd71f8ffebbc6f6ce}\index{calculatorapp.cpp@{calculatorapp.cpp}!runSequentialTest@{runSequentialTest}}
+\index{runSequentialTest@{runSequentialTest}!calculatorapp.cpp@{calculatorapp.cpp}}
+\doxysubsubsection{\texorpdfstring{runSequentialTest()}{runSequentialTest()}}
+{\footnotesize\ttfamily \label{calculatorapp_8cpp_a043e8efaabec294fd71f8ffebbc6f6ce} 
+\mbox{\hyperlink{struct_performance_result}{Performance\+Result}} run\+Sequential\+Test (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{}\end{DoxyParamCaption})}
+
+
+
+Runs a sequential Pi calculation test. 
+
+This function performs a sequential Pi calculation with the specified number of points and measures the execution time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to use in the calculation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_performance_result}{Performance\+Result} containing the test results 
+\end{DoxyReturn}

@@ -25,6 +25,9 @@ target_include_directories(${APPNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}/../calculator/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
 
+# Add OpenMP support
+target_link_libraries(${APPNAME} PRIVATE OpenMP::OpenMP_CXX)
+
 # Add any dependencies or compile options specific to lock6g
 target_link_libraries(${APPNAME} PRIVATE calculator utility)
 

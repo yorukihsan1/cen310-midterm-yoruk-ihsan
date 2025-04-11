@@ -1,0 +1,243 @@
+\doxysection{Coruh\+::Calculator\+::Calculator Class Reference}
+\hypertarget{class_coruh_1_1_calculator_1_1_calculator}{}\label{class_coruh_1_1_calculator_1_1_calculator}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+
+
+Provides Monte Carlo Pi calculation and visualization functions.  
+
+
+
+
+{\ttfamily \#include $<$calculator.\+h$>$}
+
+
+
+Collaboration diagram for Coruh\+::Calculator\+::Calculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_coruh_1_1_calculator_1_1_calculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d}{calculate\+Pi\+Sequential}} (int num\+Points)
+\begin{DoxyCompactList}\small\item\em Calculates Pi using Monte Carlo method sequentially. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827}{calculate\+Pi\+Parallel}} (int num\+Points, int num\+Threads)
+\begin{DoxyCompactList}\small\item\em Calculates Pi using Monte Carlo method in parallel using Open\+MP. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}{generate\+Points}} (int num\+Points)
+\begin{DoxyCompactList}\small\item\em Generates random points for Monte Carlo Pi calculation. \end{DoxyCompactList}\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}{calculate\+Convergence}} (const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Calculates the convergence rate of Pi calculation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}{is\+Inside\+Circle}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Checks if a point lies inside the unit circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides Monte Carlo Pi calculation and visualization functions. 
+
+This class implements the Monte Carlo method for calculating Pi using both sequential and parallel approaches. The parallel implementation uses Open\+MP to distribute the work across multiple threads.
+
+The Monte Carlo method works by\+:
+\begin{DoxyEnumerate}
+\item Generating random points in a 2x2 square centered at the origin
+\item Counting how many points fall inside a unit circle (radius 1)
+\item Calculating Pi as 4 \texorpdfstring{$\ast$}{*} (points inside circle) / (total points)
+\end{DoxyEnumerate}
+
+The accuracy of the result improves with more points, but so does the computation time. The parallel implementation can significantly reduce computation time on multi-\/core systems. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!calculateConvergence@{calculateConvergence}}
+\index{calculateConvergence@{calculateConvergence}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{calculateConvergence()}{calculateConvergence()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06} 
+std\+::vector$<$ double $>$ Calculator\+::calculate\+Convergence (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \&}]{points}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the convergence rate of Pi calculation. 
+
+Calculates the convergence rate of Pi calculation.
+
+This function analyzes how the Pi approximation converges as more points are processed. It calculates Pi approximations at regular intervals to show the convergence behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Vector of points to analyze. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of Pi approximations at different stages.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The approximations are calculated every 1000 points to show the convergence behavior over time.
+\end{DoxyNote}
+This function analyzes how the Pi approximation converges as more points are processed. It calculates Pi approximations at regular intervals to show the convergence behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Vector of points to analyze \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of Pi approximations at different stages 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!calculatePiParallel@{calculatePiParallel}}
+\index{calculatePiParallel@{calculatePiParallel}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{calculatePiParallel()}{calculatePiParallel()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827} 
+double Calculator\+::calculate\+Pi\+Parallel (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{, }\item[{int}]{num\+Threads}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates Pi using Monte Carlo method in parallel using Open\+MP. 
+
+Calculates Pi using Monte Carlo method in parallel using Open\+MP.
+
+This function implements the parallel version of the Monte Carlo method using Open\+MP. It distributes the work across multiple threads to improve performance on multi-\/core systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate. \\
+\hline
+{\em num\+Threads} & Number of threads to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated value of Pi.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The speedup depends on the number of available CPU cores and the overhead of thread creation and synchronization.
+\end{DoxyNote}
+This function implements the parallel version of the Monte Carlo method. It distributes the work across multiple threads using Open\+MP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate \\
+\hline
+{\em num\+Threads} & Number of threads to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated value of Pi 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!calculatePiSequential@{calculatePiSequential}}
+\index{calculatePiSequential@{calculatePiSequential}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{calculatePiSequential()}{calculatePiSequential()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d} 
+double Calculator\+::calculate\+Pi\+Sequential (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates Pi using Monte Carlo method sequentially. 
+
+Calculates Pi using Monte Carlo method sequentially.
+
+This function implements the sequential version of the Monte Carlo method for calculating Pi. It generates random points and counts how many fall inside a unit circle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated value of Pi.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The accuracy improves with more points, but computation time increases linearly with the number of points.
+\end{DoxyNote}
+This function implements the sequential version of the Monte Carlo method. It generates random points and counts how many fall inside a unit circle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated value of Pi 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!generatePoints@{generatePoints}}
+\index{generatePoints@{generatePoints}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42} 
+std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ Calculator\+::generate\+Points (\begin{DoxyParamCaption}\item[{int}]{num\+Points}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates random points for Monte Carlo Pi calculation. 
+
+Generates random points for Monte Carlo Pi calculation.
+
+This function generates random points in a 2x2 square centered at the origin. The points are used for the Monte Carlo Pi calculation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of points (x,y coordinates).
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The points are generated using a uniform distribution in the range \mbox{[}-\/1, 1\mbox{]} for both x and y coordinates.
+\end{DoxyNote}
+This function generates random points in a 2x2 square centered at the origin. The points are used for the Monte Carlo Pi calculation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Points} & Number of points to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of points (x,y coordinates) 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!isInsideCircle@{isInsideCircle}}
+\index{isInsideCircle@{isInsideCircle}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{isInsideCircle()}{isInsideCircle()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e} 
+bool Calculator\+::is\+Inside\+Circle (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Checks if a point lies inside the unit circle. 
+
+Checks if a point lies inside the unit circle.
+
+This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the point. \\
+\hline
+{\em y} & Y coordinate of the point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if point is inside the circle, false otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+A point is inside the unit circle if x\texorpdfstring{$^\wedge$}{\string^}2 + y\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$<$}{<}= 1.
+\end{DoxyNote}
+This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the point \\
+\hline
+{\em y} & Y coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if point is inside the circle, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/calculator/header/\mbox{\hyperlink{calculator_8h}{calculator.\+h}}\item 
+src/calculator/src/\mbox{\hyperlink{calculator_8cpp}{calculator.\+cpp}}\end{DoxyCompactItemize}

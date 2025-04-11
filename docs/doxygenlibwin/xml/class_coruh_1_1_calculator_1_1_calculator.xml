@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_coruh_1_1_calculator_1_1_calculator" kind="class" language="C++" prot="public">
+    <compoundname>Coruh::Calculator::Calculator</compoundname>
+    <includes refid="calculator_8h" local="no">calculator.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::calculatePiSequential</definition>
+        <argsstring>(int numPoints)</argsstring>
+        <name>calculatePiSequential</name>
+        <qualifiedname>Coruh::Calculator::Calculator::calculatePiSequential</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numPoints</declname>
+        </param>
+        <briefdescription>
+<para>Calculates Pi using Monte Carlo method sequentially. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates Pi using Monte Carlo method sequentially.</para>
+<para>This function implements the sequential version of the Monte Carlo method for calculating Pi. It generates random points and counts how many fall inside a unit circle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated value of Pi.</para>
+</simplesect>
+<simplesect kind="note"><para>The accuracy improves with more points, but computation time increases linearly with the number of points.</para>
+</simplesect>
+This function implements the sequential version of the Monte Carlo method. It generates random points and counts how many fall inside a unit circle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated value of Pi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="60" column="27" bodyfile="src/calculator/src/calculator.cpp" bodystart="45" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::calculatePiParallel</definition>
+        <argsstring>(int numPoints, int numThreads)</argsstring>
+        <name>calculatePiParallel</name>
+        <qualifiedname>Coruh::Calculator::Calculator::calculatePiParallel</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numPoints</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+<para>Calculates Pi using Monte Carlo method in parallel using OpenMP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates Pi using Monte Carlo method in parallel using OpenMP.</para>
+<para>This function implements the parallel version of the Monte Carlo method using OpenMP. It distributes the work across multiple threads to improve performance on multi-core systems.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numThreads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of threads to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated value of Pi.</para>
+</simplesect>
+<simplesect kind="note"><para>The speedup depends on the number of available CPU cores and the overhead of thread creation and synchronization.</para>
+</simplesect>
+This function implements the parallel version of the Monte Carlo method. It distributes the work across multiple threads using OpenMP.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numThreads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of threads to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated value of Pi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="76" column="27" bodyfile="src/calculator/src/calculator.cpp" bodystart="68" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt; std::pair&lt; double, double &gt; &gt; Calculator::generatePoints</definition>
+        <argsstring>(int numPoints)</argsstring>
+        <name>generatePoints</name>
+        <qualifiedname>Coruh::Calculator::Calculator::generatePoints</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numPoints</declname>
+        </param>
+        <briefdescription>
+<para>Generates random points for Monte Carlo Pi calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates random points for Monte Carlo Pi calculation.</para>
+<para>This function generates random points in a 2x2 square centered at the origin. The points are used for the Monte Carlo Pi calculation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of points (x,y coordinates).</para>
+</simplesect>
+<simplesect kind="note"><para>The points are generated using a uniform distribution in the range [-1, 1] for both x and y coordinates.</para>
+</simplesect>
+This function generates random points in a 2x2 square centered at the origin. The points are used for the Monte Carlo Pi calculation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points to generate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of points (x,y coordinates) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="90" column="32" bodyfile="src/calculator/src/calculator.cpp" bodystart="100" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; Calculator::calculateConvergence</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; double, double &gt; &gt; &amp;points)</argsstring>
+        <name>calculateConvergence</name>
+        <qualifiedname>Coruh::Calculator::Calculator::calculateConvergence</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; double, double &gt; &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the convergence rate of Pi calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the convergence rate of Pi calculation.</para>
+<para>This function analyzes how the Pi approximation converges as more points are processed. It calculates Pi approximations at regular intervals to show the convergence behavior.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of points to analyze. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of Pi approximations at different stages.</para>
+</simplesect>
+<simplesect kind="note"><para>The approximations are calculated every 1000 points to show the convergence behavior over time.</para>
+</simplesect>
+This function analyzes how the Pi approximation converges as more points are processed. It calculates Pi approximations at regular intervals to show the convergence behavior.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of points to analyze </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of Pi approximations at different stages </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="105" column="32" bodyfile="src/calculator/src/calculator.cpp" bodystart="124" bodyend="138"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Calculator::isInsideCircle</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>isInsideCircle</name>
+        <qualifiedname>Coruh::Calculator::Calculator::isInsideCircle</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a point lies inside the unit circle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a point lies inside the unit circle.</para>
+<para>This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if point is inside the circle, false otherwise.</para>
+</simplesect>
+<simplesect kind="note"><para>A point is inside the unit circle if x^2 + y^2 &lt;= 1.</para>
+</simplesect>
+This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if point is inside the circle, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="120" column="25" bodyfile="src/calculator/src/calculator.cpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides Monte Carlo Pi calculation and visualization functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the Monte Carlo method for calculating Pi using both sequential and parallel approaches. The parallel implementation uses OpenMP to distribute the work across multiple threads.</para>
+<para>The Monte Carlo method works by:<orderedlist>
+<listitem><para>Generating random points in a 2x2 square centered at the origin</para>
+</listitem><listitem><para>Counting how many points fall inside a unit circle (radius 1)</para>
+</listitem><listitem><para>Calculating Pi as 4 * (points inside circle) / (total points)</para>
+</listitem></orderedlist>
+</para>
+<para>The accuracy of the result improves with more points, but so does the computation time. The parallel implementation can significantly reduce computation time on multi-core systems. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Coruh::Calculator::Calculator</label>
+        <link refid="class_coruh_1_1_calculator_1_1_calculator"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/calculator/header/calculator.h" line="44" column="9" bodyfile="src/calculator/header/calculator.h" bodystart="45" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculateConvergence</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculatePiParallel</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculatePiSequential</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>generatePoints</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="private" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>isInsideCircle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

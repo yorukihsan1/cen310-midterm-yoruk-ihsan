@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_performance_result" kind="struct" language="C++" prot="public">
+    <compoundname>PerformanceResult</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_performance_result_1a0657a45653a18e8386b6b87cf5000a8e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PerformanceResult::numPoints</definition>
+        <argsstring></argsstring>
+        <name>numPoints</name>
+        <qualifiedname>PerformanceResult::numPoints</qualifiedname>
+        <briefdescription>
+<para>Number of points used in the calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="37" column="9" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_performance_result_1a3140f94bff5faebe940e8587012d0d6a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PerformanceResult::numThreads</definition>
+        <argsstring></argsstring>
+        <name>numThreads</name>
+        <qualifiedname>PerformanceResult::numThreads</qualifiedname>
+        <briefdescription>
+<para>Number of threads used (1 for sequential) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="38" column="9" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_performance_result_1aa8b94ae8032689528a43bb917ee96657" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PerformanceResult::pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <qualifiedname>PerformanceResult::pi</qualifiedname>
+        <briefdescription>
+<para>Calculated Pi value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="39" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_performance_result_1a9cf6211ffa7e0af3a539065f7c32757e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PerformanceResult::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>PerformanceResult::error</qualifiedname>
+        <briefdescription>
+<para>Error percentage compared to actual Pi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="40" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_performance_result_1a69140eb4792b71cff7f46c9fe14e5f22" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PerformanceResult::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>PerformanceResult::time</qualifiedname>
+        <briefdescription>
+<para>Execution time in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="41" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure to hold performance results. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure stores the results of a performance test, including the number of points, number of threads, calculated Pi value, error, and execution time. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PerformanceResult</label>
+        <link refid="struct_performance_result"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/calculatorapp/src/calculatorapp.cpp" line="36" column="1" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="36" bodyend="42"/>
+    <listofallmembers>
+      <member refid="struct_performance_result_1a9cf6211ffa7e0af3a539065f7c32757e" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>error</name></member>
+      <member refid="struct_performance_result_1a0657a45653a18e8386b6b87cf5000a8e" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>numPoints</name></member>
+      <member refid="struct_performance_result_1a3140f94bff5faebe940e8587012d0d6a" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>numThreads</name></member>
+      <member refid="struct_performance_result_1aa8b94ae8032689528a43bb917ee96657" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>pi</name></member>
+      <member refid="struct_performance_result_1a69140eb4792b71cff7f46c9fe14e5f22" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="class_coruh_1_1_calculator_1_1_calculator" kind="class"><name>Coruh::Calculator::Calculator</name>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" kind="function"><name>calculatePiSequential</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" kind="function"><name>calculatePiParallel</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" kind="function"><name>generatePoints</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" kind="function"><name>calculateConvergence</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" kind="function"><name>isInsideCircle</name></member>
+  </compound>
+  <compound refid="class_coruh_1_1_utility_1_1_math_utility" kind="class"><name>Coruh::Utility::MathUtility</name>
+    <member refid="class_coruh_1_1_utility_1_1_math_utility_1abe3d63ed2737ae3c006bcc5732a3d01f" kind="function"><name>calculateMean</name></member>
+    <member refid="class_coruh_1_1_utility_1_1_math_utility_1aa5888ea1bef95e477a66c2dd8517b885" kind="function"><name>calculateMedian</name></member>
+    <member refid="class_coruh_1_1_utility_1_1_math_utility_1a8a30d3bb9945b043c861257596f17c30" kind="function"><name>compareDouble</name></member>
+    <member refid="class_coruh_1_1_utility_1_1_math_utility_1ac66a656b821b690761a1db545359508d" kind="function"><name>calculateMinMax</name></member>
+  </compound>
+  <compound refid="struct_performance_result" kind="struct"><name>PerformanceResult</name>
+    <member refid="struct_performance_result_1a0657a45653a18e8386b6b87cf5000a8e" kind="variable"><name>numPoints</name></member>
+    <member refid="struct_performance_result_1a3140f94bff5faebe940e8587012d0d6a" kind="variable"><name>numThreads</name></member>
+    <member refid="struct_performance_result_1aa8b94ae8032689528a43bb917ee96657" kind="variable"><name>pi</name></member>
+    <member refid="struct_performance_result_1a9cf6211ffa7e0af3a539065f7c32757e" kind="variable"><name>error</name></member>
+    <member refid="struct_performance_result_1a69140eb4792b71cff7f46c9fe14e5f22" kind="variable"><name>time</name></member>
+  </compound>
+  <compound refid="namespace_coruh" kind="namespace"><name>Coruh</name>
+  </compound>
+  <compound refid="namespace_coruh_1_1_calculator" kind="namespace"><name>Coruh::Calculator</name>
+  </compound>
+  <compound refid="namespace_coruh_1_1_utility" kind="namespace"><name>Coruh::Utility</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="calculator_8h" kind="file"><name>calculator.h</name>
+  </compound>
+  <compound refid="calculator_8cpp" kind="file"><name>calculator.cpp</name>
+  </compound>
+  <compound refid="calculatorapp_8h" kind="file"><name>calculatorapp.h</name>
+  </compound>
+  <compound refid="calculatorapp_8cpp" kind="file"><name>calculatorapp.cpp</name>
+    <member refid="calculatorapp_8cpp_1a86f0089f092c1735d3183401c7824427" kind="function"><name>printResults</name></member>
+    <member refid="calculatorapp_8cpp_1a043e8efaabec294fd71f8ffebbc6f6ce" kind="function"><name>runSequentialTest</name></member>
+    <member refid="calculatorapp_8cpp_1aeda979de8e91f095f8556f4ad20fbe8d" kind="function"><name>runParallelTest</name></member>
+    <member refid="calculatorapp_8cpp_1aa5739e9358f4e4ca33861a6caa0047d8" kind="function"><name>runConvergenceTest</name></member>
+    <member refid="calculatorapp_8cpp_1aadaaf41e57641a5e410728952cefdd13" kind="function"><name>runPerformanceAnalysis</name></member>
+    <member refid="calculatorapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="common_types_8h" kind="file"><name>commonTypes.h</name>
+  </compound>
+  <compound refid="math_utility_8h" kind="file"><name>mathUtility.h</name>
+  </compound>
+  <compound refid="math_utility_8cpp" kind="file"><name>mathUtility.cpp</name>
+  </compound>
+  <compound refid="dir_05e57a8512d411a64fc14754c853dfa6" kind="dir"><name>src/calculator</name>
+  </compound>
+  <compound refid="dir_ee586f9e7adfbbacd65abd2bdb93adb3" kind="dir"><name>src/calculatorapp</name>
+  </compound>
+  <compound refid="dir_167901705585408ff6f24ccdedd6a93a" kind="dir"><name>src/calculator/header</name>
+  </compound>
+  <compound refid="dir_e006bb7c9dfce277d72d5826207c5d4a" kind="dir"><name>src/calculatorapp/header</name>
+  </compound>
+  <compound refid="dir_1a3b8499b331fe4e1564b1eb295a0893" kind="dir"><name>src/utility/header</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_41702694b5182e8e2500db68e8f78cf9" kind="dir"><name>src/calculator/src</name>
+  </compound>
+  <compound refid="dir_f6154214b2146273d19620ddc939c281" kind="dir"><name>src/calculatorapp/src</name>
+  </compound>
+  <compound refid="dir_e82d5b00f3064e3249317b7e44769fc6" kind="dir"><name>src/utility/src</name>
+  </compound>
+  <compound refid="dir_0619a8f54b4fad7043a6de45be8fde0b" kind="dir"><name>src/utility</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

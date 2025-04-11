@@ -1,0 +1,46 @@
+\doxysection{src/calculator/header/calculator.h File Reference}
+\hypertarget{calculator_8h}{}\label{calculator_8h}\index{src/calculator/header/calculator.h@{src/calculator/header/calculator.h}}
+
+
+Provides functions for Monte Carlo Pi calculation and visualization.  
+
+
+{\ttfamily \#include "{}../../utility/header/common\+Types.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+Include dependency graph for calculator.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{calculator_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{calculator_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator}{Coruh\+::\+Calculator\+::\+Calculator}}
+\begin{DoxyCompactList}\small\item\em Provides Monte Carlo Pi calculation and visualization functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_coruh}{Coruh}}
+\item 
+namespace \mbox{\hyperlink{namespace_coruh_1_1_calculator}{Coruh\+::\+Calculator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions for Monte Carlo Pi calculation and visualization. 
+
+This file contains the implementation of the Monte Carlo method for calculating Pi. The Monte Carlo method uses random sampling to approximate the value of Pi by comparing the ratio of points inside a unit circle (radius 1) to the total number of points in a square that contains the circle.
+
+The implementation includes both sequential and parallel versions using Open\+MP. The parallel version distributes the work across multiple threads to improve performance on multi-\/core systems. 

@@ -29,6 +29,9 @@ target_include_directories(${EXENAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}/../../calculator/header
 						   ${CMAKE_CURRENT_SOURCE_DIR})
 
+# Add OpenMP support
+target_link_libraries(${EXENAME} PRIVATE OpenMP::OpenMP_CXX)
+
 # Add any dependencies or compile options specific to aka5g tests
 target_link_libraries(${EXENAME} PRIVATE calculator utility gtest gtest_main)
 

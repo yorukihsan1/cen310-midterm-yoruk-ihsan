@@ -24,6 +24,9 @@ target_include_directories(${LIBNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}/../utility/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
 
+# Add OpenMP support
+target_link_libraries(${LIBNAME} PRIVATE OpenMP::OpenMP_CXX)
+
 # Add any dependencies or compile options specific to crypto
 target_link_libraries(${LIBNAME} PRIVATE utility)
 

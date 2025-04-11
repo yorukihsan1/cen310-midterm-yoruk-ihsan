@@ -44,6 +44,15 @@ option(ENABLE_CALCULATOR "Enable Calculator Module" ON)
 option(ENABLE_CALCULATOR_APP "Enable Calculator Application" ON)
 option(ENABLE_TESTS "Enable All Tests" ON)
 
+# Find OpenMP package
+find_package(OpenMP REQUIRED)
+if(OpenMP_CXX_FOUND)
+    message(STATUS "[${ROOT}] OpenMP found: ${OpenMP_CXX_VERSION}")
+    add_compile_definitions(USE_OPENMP)
+else()
+    message(FATAL_ERROR "[${ROOT}] OpenMP not found. Please install OpenMP.")
+endif()
+
 # Configure tests
 add_compile_definitions(ENABLE_UTILITY_TEST)
 add_compile_definitions(ENABLE_CALCULATOR_TEST)
@@ -92,8 +101,6 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 else()
   message(WARNING "[${ROOT}] Not supported with the current compiler.")
 endif()
-
-
 
 # Utility submodule
 if(ENABLE_UTILITY)
