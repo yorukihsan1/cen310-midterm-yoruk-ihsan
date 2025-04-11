@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../calculatorapp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'calculatorapp.cpp']]]
+  ['generatepoints_0',['generatePoints',['../class_coruh_1_1_calculator_1_1_calculator.html#aa3972791132e2b100c5ee7922ef1ab42',1,'Coruh::Calculator::Calculator']]]
 ];

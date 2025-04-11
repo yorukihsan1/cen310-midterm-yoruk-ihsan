@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
   <compound refid="class_coruh_1_1_calculator_1_1_calculator" kind="class"><name>Coruh::Calculator::Calculator</name>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" kind="function"><name>isInsideCircle</name></member>
     <member refid="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" kind="function"><name>calculatePiSequential</name></member>
     <member refid="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" kind="function"><name>calculatePiParallel</name></member>
     <member refid="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" kind="function"><name>generatePoints</name></member>
     <member refid="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" kind="function"><name>calculateConvergence</name></member>
-    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" kind="function"><name>isInsideCircle</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a54ca827c4b408c795576d48503eee6aa" kind="function"><name>add</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1ad8a28a8b990342d4bfde65ab85ec7596" kind="function"><name>subtract</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a319373a53b4e84f92c207e4f7bb9dfce" kind="function"><name>multiply</name></member>
+    <member refid="class_coruh_1_1_calculator_1_1_calculator_1a7da73cdbcc434a4f28d614f7f036b74a" kind="function"><name>divide</name></member>
   </compound>
   <compound refid="class_coruh_1_1_utility_1_1_math_utility" kind="class"><name>Coruh::Utility::MathUtility</name>
     <member refid="class_coruh_1_1_utility_1_1_math_utility_1abe3d63ed2737ae3c006bcc5732a3d01f" kind="function"><name>calculateMean</name></member>
@@ -35,6 +39,7 @@
   <compound refid="calculatorapp_8h" kind="file"><name>calculatorapp.h</name>
   </compound>
   <compound refid="calculatorapp_8cpp" kind="file"><name>calculatorapp.cpp</name>
+    <member refid="calculatorapp_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kind="define"><name>M_PI</name></member>
     <member refid="calculatorapp_8cpp_1a86f0089f092c1735d3183401c7824427" kind="function"><name>printResults</name></member>
     <member refid="calculatorapp_8cpp_1a043e8efaabec294fd71f8ffebbc6f6ce" kind="function"><name>runSequentialTest</name></member>
     <member refid="calculatorapp_8cpp_1aeda979de8e91f095f8556f4ad20fbe8d" kind="function"><name>runParallelTest</name></member>

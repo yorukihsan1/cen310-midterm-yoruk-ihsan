@@ -11,8 +11,7 @@ Provides Monte Carlo Pi calculation and visualization functions.
 
 
 
-Collaboration diagram for Coruh\+::Calculator\+::Calculator\+:
-\nopagebreak
+Collaboration diagram for Coruh\+::Calculator\+::Calculator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,6 +21,8 @@ Collaboration diagram for Coruh\+::Calculator\+::Calculator\+:
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+static bool \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}{is\+Inside\+Circle}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Checks if a point lies inside the unit circle. \end{DoxyCompactList}\item 
 static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d}{calculate\+Pi\+Sequential}} (int num\+Points)
 \begin{DoxyCompactList}\small\item\em Calculates Pi using Monte Carlo method sequentially. \end{DoxyCompactList}\item 
 static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827}{calculate\+Pi\+Parallel}} (int num\+Points, int num\+Threads)
@@ -29,12 +30,15 @@ static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ae9a7a5
 static std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}{generate\+Points}} (int num\+Points)
 \begin{DoxyCompactList}\small\item\em Generates random points for Monte Carlo Pi calculation. \end{DoxyCompactList}\item 
 static std\+::vector$<$ double $>$ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}{calculate\+Convergence}} (const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \&points)
-\begin{DoxyCompactList}\small\item\em Calculates the convergence rate of Pi calculation. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Private Member Functions}
-\begin{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the convergence rate of Pi calculation. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a54ca827c4b408c795576d48503eee6aa}{add}} (double a, double b)
 \item 
-static bool \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}{is\+Inside\+Circle}} (double x, double y)
-\begin{DoxyCompactList}\small\item\em Checks if a point lies inside the unit circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ad8a28a8b990342d4bfde65ab85ec7596}{subtract}} (double a, double b)
+\item 
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a319373a53b4e84f92c207e4f7bb9dfce}{multiply}} (double a, double b)
+\item 
+static double \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a7da73cdbcc434a4f28d614f7f036b74a}{divide}} (double a, double b)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,6 +56,22 @@ The Monte Carlo method works by\+:
 The accuracy of the result improves with more points, but so does the computation time. The parallel implementation can significantly reduce computation time on multi-\/core systems. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a54ca827c4b408c795576d48503eee6aa}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!add@{add}}
+\index{add@{add}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a54ca827c4b408c795576d48503eee6aa} 
+double Calculator\+::add (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds two numbers. 
+\begin{DoxyParams}{Parameters}
+{\em a} & First number \\
+\hline
+{\em b} & Second number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of a and b 
+\end{DoxyReturn}
 \Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!calculateConvergence@{calculateConvergence}}
 \index{calculateConvergence@{calculateConvergence}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
 \doxysubsubsection{\texorpdfstring{calculateConvergence()}{calculateConvergence()}}
@@ -161,6 +181,27 @@ This function implements the sequential version of the Monte Carlo method. It ge
 \begin{DoxyReturn}{Returns}
 The calculated value of Pi 
 \end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a7da73cdbcc434a4f28d614f7f036b74a}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!divide@{divide}}
+\index{divide@{divide}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a7da73cdbcc434a4f28d614f7f036b74a} 
+double Calculator\+::divide (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Divides first number by second number. 
+\begin{DoxyParams}{Parameters}
+{\em a} & First number \\
+\hline
+{\em b} & Second number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quotient of a and b 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if b is zero \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!generatePoints@{generatePoints}}
 \index{generatePoints@{generatePoints}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
 \doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
@@ -200,7 +241,7 @@ Vector of points (x,y coordinates)
 \index{isInsideCircle@{isInsideCircle}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
 \doxysubsubsection{\texorpdfstring{isInsideCircle()}{isInsideCircle()}}
 {\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e} 
-bool Calculator\+::is\+Inside\+Circle (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+bool Calculator\+::is\+Inside\+Circle (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -212,13 +253,13 @@ This function determines if a given point (x,y) lies inside the unit circle (rad
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & X coordinate of the point. \\
+{\em x} & X coordinate of the point \\
 \hline
-{\em y} & Y coordinate of the point. \\
+{\em y} & Y coordinate of the point \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if point is inside the circle, false otherwise.
+true if point is inside the circle, false otherwise
 \end{DoxyReturn}
 \begin{DoxyNote}{Note}
 A point is inside the unit circle if x\texorpdfstring{$^\wedge$}{\string^}2 + y\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$<$}{<}= 1.
@@ -234,6 +275,38 @@ This function determines if a given point (x,y) lies inside the unit circle (rad
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if point is inside the circle, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_a319373a53b4e84f92c207e4f7bb9dfce}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!multiply@{multiply}}
+\index{multiply@{multiply}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_a319373a53b4e84f92c207e4f7bb9dfce} 
+double Calculator\+::multiply (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Multiplies two numbers. 
+\begin{DoxyParams}{Parameters}
+{\em a} & First number \\
+\hline
+{\em b} & Second number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Product of a and b 
+\end{DoxyReturn}
+\Hypertarget{class_coruh_1_1_calculator_1_1_calculator_ad8a28a8b990342d4bfde65ab85ec7596}\index{Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}!subtract@{subtract}}
+\index{subtract@{subtract}!Coruh::Calculator::Calculator@{Coruh::Calculator::Calculator}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily \label{class_coruh_1_1_calculator_1_1_calculator_ad8a28a8b990342d4bfde65ab85ec7596} 
+double Calculator\+::subtract (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Subtracts second number from first number. 
+\begin{DoxyParams}{Parameters}
+{\em a} & First number \\
+\hline
+{\em b} & Second number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Difference of a and b 
 \end{DoxyReturn}
 
 

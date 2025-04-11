@@ -2,55 +2,94 @@
 \hypertarget{calculator__test_8cpp_source}{}\label{calculator__test_8cpp_source}\index{src/tests/calculator/calculator\_test.cpp@{src/tests/calculator/calculator\_test.cpp}}
 \mbox{\hyperlink{calculator__test_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00001}00001\ \textcolor{comment}{//\#define\ ENABLE\_CALCULATOR\_TEST\ \ //\ Uncomment\ this\ line\ to\ enable\ the\ Calculator\ tests}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}gtest/gtest.h"{}}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}../../calculator/header/calculator.h"{}}\ \ \textcolor{comment}{//\ Adjust\ this\ include\ path\ based\ on\ your\ project\ structure}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}gtest/gtest.h"{}}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../../calculator/header/calculator.h"{}}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }Coruh::Calculator;}
 \DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00006}00006\ \textcolor{keyword}{using\ namespace\ }Coruh::Calculator;}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00008}\mbox{\hyperlink{class_calculator_test}{00008}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_calculator_test}{CalculatorTest}}\ :\ \textcolor{keyword}{public}\ ::testing::Test\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00009}00009\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00010}\mbox{\hyperlink{class_calculator_test_a16acabe39b00dc041fea47f1b99f9983}{00010}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_calculator_test_a16acabe39b00dc041fea47f1b99f9983}{SetUp}}()\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setup\ test\ data}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00012}00012\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00014}\mbox{\hyperlink{class_calculator_test_a49df00b9c0d435932adb5e1291ca06c4}{00014}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_calculator_test_a49df00b9c0d435932adb5e1291ca06c4}{TearDown}}()\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clean\ up\ test\ data}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00016}00016\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00017}00017\ \};}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00006}\mbox{\hyperlink{class_calculator_test}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_calculator_test}{CalculatorTest}}\ :\ \textcolor{keyword}{public}\ ::testing::Test\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00007}00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00008}\mbox{\hyperlink{class_calculator_test_a16acabe39b00dc041fea47f1b99f9983}{00008}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_calculator_test_a16acabe39b00dc041fea47f1b99f9983}{SetUp}}()\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00009}\mbox{\hyperlink{class_calculator_test_a49df00b9c0d435932adb5e1291ca06c4}{00009}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_calculator_test_a49df00b9c0d435932adb5e1291ca06c4}{TearDown}}()\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00010}00010\ \};}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00012}00012\ \textcolor{comment}{//\ ===\ Test:\ Basic\ Arithmetic\ Operations\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00013}\mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{00013}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestAdd)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00014}00014\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::add(2.0,\ 3.0),\ 5.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00015}00015\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::add(-\/2.0,\ 3.0),\ 1.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00016}00016\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::add(0.0,\ 0.0),\ 0.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00017}00017\ \}}
 \DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00019}\mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{00019}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestAdd)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ Calculator::add(5.0,\ 3.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00021}00021\ \ \ \ \ EXPECT\_DOUBLE\_EQ(result,\ 8.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00022}00022\ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00024}\mbox{\hyperlink{calculator__test_8cpp_a5b10cd9bfcd77263a48173a3d0b5ff7b}{00024}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestSubtract)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ Calculator::subtract(5.0,\ 3.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00026}00026\ \ \ \ \ EXPECT\_DOUBLE\_EQ(result,\ 2.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00027}00027\ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00029}\mbox{\hyperlink{calculator__test_8cpp_acd37c4ea71846a04d2b04b3c6c3e135b}{00029}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestMultiply)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ Calculator::multiply(5.0,\ 3.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00031}00031\ \ \ \ \ EXPECT\_DOUBLE\_EQ(result,\ 15.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00032}00032\ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00034}\mbox{\hyperlink{calculator__test_8cpp_a885dc4f6a00c3d0b54725164c875dd25}{00034}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestDivide)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ Calculator::divide(6.0,\ 3.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00036}00036\ \ \ \ \ EXPECT\_DOUBLE\_EQ(result,\ 2.0);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00037}00037\ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00039}\mbox{\hyperlink{calculator__test_8cpp_aadb9113df327e8be871f5035e19beded}{00039}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestDivideByZero)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00040}00040\ \ \ \ \ EXPECT\_THROW(Calculator::divide(5.0,\ 0.0),\ std::invalid\_argument);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00041}00041\ \}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00050}\mbox{\hyperlink{calculator__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00050}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{calculator__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00051}00051\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_CALCULATOR\_TEST}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00052}00052\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00054}00054\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00019}\mbox{\hyperlink{calculator__test_8cpp_a5b10cd9bfcd77263a48173a3d0b5ff7b}{00019}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestSubtract)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00020}00020\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::subtract(5.0,\ 3.0),\ 2.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00021}00021\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::subtract(-\/2.0,\ 3.0),\ -\/5.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00022}00022\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::subtract(0.0,\ 0.0),\ 0.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00025}\mbox{\hyperlink{calculator__test_8cpp_acd37c4ea71846a04d2b04b3c6c3e135b}{00025}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestMultiply)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00026}00026\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::multiply(2.0,\ 3.0),\ 6.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00027}00027\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::multiply(-\/2.0,\ 3.0),\ -\/6.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00028}00028\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::multiply(0.0,\ 5.0),\ 0.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00031}\mbox{\hyperlink{calculator__test_8cpp_a885dc4f6a00c3d0b54725164c875dd25}{00031}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestDivide)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00032}00032\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::divide(6.0,\ 2.0),\ 3.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00033}00033\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::divide(-\/6.0,\ 2.0),\ -\/3.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00034}00034\ \ \ \ \ EXPECT\_DOUBLE\_EQ(Calculator::divide(0.0,\ 5.0),\ 0.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00035}00035\ \ \ \ \ EXPECT\_THROW(Calculator::divide(5.0,\ 0.0),\ std::invalid\_argument);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00038}00038\ \textcolor{comment}{//\ ===\ Test:\ isInsideCircle\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00039}\mbox{\hyperlink{calculator__test_8cpp_ad969fe067beaf84e4cf43d32011ab74a}{00039}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestIsInsideCircle)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Points\ on\ the\ circle\ (x\string^2\ +\ y\string^2\ =\ 1)}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00041}00041\ \ \ \ \ EXPECT\_TRUE(Calculator::isInsideCircle(1.0,\ 0.0));}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00042}00042\ \ \ \ \ EXPECT\_TRUE(Calculator::isInsideCircle(0.0,\ 1.0));}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00043}00043\ \ \ \ \ EXPECT\_FALSE(Calculator::isInsideCircle(1.0,\ 1.0));}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00044}00044\ \ \ \ \ EXPECT\_TRUE(Calculator::isInsideCircle(0.5,\ 0.5));}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00045}00045\ \ \ \ \ EXPECT\_FALSE(Calculator::isInsideCircle(1.1,\ 0.0));}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00048}00048\ \textcolor{comment}{//\ ===\ Test:\ generatePoints\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00049}\mbox{\hyperlink{calculator__test_8cpp_a677a867bb10f7d7cb26b929c0a3984ea}{00049}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestGeneratePointsSizeAndRange)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ numPoints\ =\ 1000;}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{auto}\ points\ =\ Calculator::generatePoints(numPoints);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00052}00052\ \ \ \ \ EXPECT\_EQ(points.size(),\ numPoints);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ p\ :\ points)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ EXPECT\_GE(p.first,\ -\/1.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ EXPECT\_LE(p.first,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ EXPECT\_GE(p.second,\ -\/1.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ EXPECT\_LE(p.second,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00061}00061\ \textcolor{comment}{//\ ===\ Test:\ calculatePiSequential\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00062}\mbox{\hyperlink{calculator__test_8cpp_ad05614cd3fed8eb94c3038df96b4ed4a}{00062}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestCalculatePiSequential)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{double}\ pi\ =\ Calculator::calculatePiSequential(100000);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00064}00064\ \ \ \ \ EXPECT\_NEAR(pi,\ 3.1415,\ 0.05);\ \ \textcolor{comment}{//\ Monte\ Carlo\ 0.05\ tolerans}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00067}00067\ \textcolor{comment}{//\ ===\ Test:\ calculatePiParallel\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00068}\mbox{\hyperlink{calculator__test_8cpp_a7db73f77b8132899803b783d24fc80d8}{00068}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestCalculatePiParallel)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{double}\ pi\ =\ Calculator::calculatePiParallel(100000,\ 4);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00070}00070\ \ \ \ \ EXPECT\_NEAR(pi,\ 3.1415,\ 0.05);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00073}00073\ \textcolor{comment}{//\ ===\ Test:\ calculateConvergence\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00074}\mbox{\hyperlink{calculator__test_8cpp_ada64ada539a2ca0dd5663e7ad1cdc275}{00074}}\ \mbox{\hyperlink{calculator__test_8cpp_a7d9bab343a282353423ab2d980c8ac52}{TEST\_F}}(\mbox{\hyperlink{class_calculator_test}{CalculatorTest}},\ TestCalculateConvergence)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{auto}\ points\ =\ Calculator::generatePoints(10000);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{auto}\ convergence\ =\ Calculator::calculateConvergence(points);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00078}00078\ \ \ \ \ EXPECT\_GT(convergence.size(),\ 5);\ \ \textcolor{comment}{//\ 10000/1000\ =\ 10\ veri\ noktas\ beklenir}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{double}\ piVal\ :\ convergence)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ EXPECT\_GT(piVal,\ 2.5);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ EXPECT\_LT(piVal,\ 4.0);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00085}00085\ \textcolor{comment}{//\ ===\ Main\ ===}}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00086}\mbox{\hyperlink{calculator__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00086}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{calculator__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00087}00087\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
+\DoxyCodeLine{\Hypertarget{calculator__test_8cpp_source_l00089}00089\ \}}
 
 \end{DoxyCode}

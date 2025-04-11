@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{63597138-ACD4-3203-88B2-C774AC05F700}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>calculator_tests</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">calculator_tests.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">calculator_tests</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">calculator_tests.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">calculator_tests</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/_deps/googletest-src/googletest/include" /external:I "C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;USE_OPENMP;ENABLE_UTILITY_TEST;ENABLE_CALCULATOR_TEST;ENABLE_UTILITY_LOGGER;ENABLE_CALCULATOR_LOGGER;MSVC_ENV;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;USE_OPENMP;ENABLE_UTILITY_TEST;ENABLE_CALCULATOR_TEST;ENABLE_UTILITY_LOGGER;ENABLE_CALCULATOR_LOGGER;MSVC_ENV;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest\include;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest\include;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=calculator_tests -D TEST_EXECUTABLE=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/build/Debug/calculator_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=calculator_tests_TESTS -D CTEST_FILE=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/calculator_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-3.30/Modules/GoogleTestAddTests.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\calculator\Debug\calculator.lib;..\..\utility\Debug\utility.lib;..\..\..\lib\Debug\gtestd.lib;..\..\..\lib\Debug\gtest_maind.lib;..\..\..\lib\Debug\gtestd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/Debug/calculator_tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/build/Debug/calculator_tests.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/_deps/googletest-src/googletest/include" /external:I "C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_OPENMP;ENABLE_UTILITY_TEST;ENABLE_CALCULATOR_TEST;ENABLE_UTILITY_LOGGER;ENABLE_CALCULATOR_LOGGER;MSVC_ENV;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_OPENMP;ENABLE_UTILITY_TEST;ENABLE_CALCULATOR_TEST;ENABLE_UTILITY_LOGGER;ENABLE_CALCULATOR_LOGGER;MSVC_ENV;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest\include;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\..\..\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\..\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\calculator\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\utility\header;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest\include;C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=calculator_tests -D TEST_EXECUTABLE=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/build/Release/calculator_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=calculator_tests_TESTS -D CTEST_FILE=C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/calculator_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-3.30/Modules/GoogleTestAddTests.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\calculator\Release\calculator.lib;..\..\utility\Release\utility.lib;..\..\..\lib\Release\gtest.lib;..\..\..\lib\Release\gtest_main.lib;..\..\..\lib\Release\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/Release/calculator_tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/build/Release/calculator_tests.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/src/tests/calculator/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan -BC:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win --check-stamp-file C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\src\tests\calculator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/src/tests/calculator/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan -BC:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win --check-stamp-file C:/Users/yoruk/Desktop/cen310-midterm-yoruk-ihsan/build_win/src/tests/calculator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\src\tests\calculator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\calculator_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\ZERO_CHECK.vcxproj">
+      <Project>{C8294EF6-C9E4-3BB9-84A4-F74E555FD996}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\src\calculator\calculator.vcxproj">
+      <Project>{3D9158F4-F3E1-3557-B12B-43F3B27C928F}</Project>
+      <Name>calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-build\googletest\gtest.vcxproj">
+      <Project>{9BC8C79F-09EF-377A-BAC9-5E0D375178C5}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\_deps\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{79701EA3-0575-3882-A545-AF9733206974}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\build_win\src\utility\utility.vcxproj">
+      <Project>{F2CCFCFE-980F-3707-B14E-E02548CC69D4}</Project>
+      <Name>utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

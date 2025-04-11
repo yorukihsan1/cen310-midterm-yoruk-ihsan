@@ -22,7 +22,11 @@
     <member refid="calculator__test_8cpp_1a5b10cd9bfcd77263a48173a3d0b5ff7b" kind="function"><name>TEST_F</name></member>
     <member refid="calculator__test_8cpp_1acd37c4ea71846a04d2b04b3c6c3e135b" kind="function"><name>TEST_F</name></member>
     <member refid="calculator__test_8cpp_1a885dc4f6a00c3d0b54725164c875dd25" kind="function"><name>TEST_F</name></member>
-    <member refid="calculator__test_8cpp_1aadb9113df327e8be871f5035e19beded" kind="function"><name>TEST_F</name></member>
+    <member refid="calculator__test_8cpp_1ad969fe067beaf84e4cf43d32011ab74a" kind="function"><name>TEST_F</name></member>
+    <member refid="calculator__test_8cpp_1a677a867bb10f7d7cb26b929c0a3984ea" kind="function"><name>TEST_F</name></member>
+    <member refid="calculator__test_8cpp_1ad05614cd3fed8eb94c3038df96b4ed4a" kind="function"><name>TEST_F</name></member>
+    <member refid="calculator__test_8cpp_1a7db73f77b8132899803b783d24fc80d8" kind="function"><name>TEST_F</name></member>
+    <member refid="calculator__test_8cpp_1ada64ada539a2ca0dd5663e7ad1cdc275" kind="function"><name>TEST_F</name></member>
     <member refid="calculator__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="utility__test_8cpp" kind="file"><name>utility_test.cpp</name>

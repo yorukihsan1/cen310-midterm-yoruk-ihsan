@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculatorapp/src/calculatorapp.cpp" line="37" column="9" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="37" bodyend="-1"/>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="41" column="7" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_performance_result_1a3140f94bff5faebe940e8587012d0d6a" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculatorapp/src/calculatorapp.cpp" line="38" column="9" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="38" bodyend="-1"/>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="42" column="7" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_performance_result_1aa8b94ae8032689528a43bb917ee96657" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculatorapp/src/calculatorapp.cpp" line="39" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="39" bodyend="-1"/>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="43" column="10" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_performance_result_1a9cf6211ffa7e0af3a539065f7c32757e" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculatorapp/src/calculatorapp.cpp" line="40" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="40" bodyend="-1"/>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="44" column="10" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_performance_result_1a69140eb4792b71cff7f46c9fe14e5f22" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculatorapp/src/calculatorapp.cpp" line="41" column="12" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="41" bodyend="-1"/>
+        <location file="src/calculatorapp/src/calculatorapp.cpp" line="45" column="10" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="45" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -91,7 +91,7 @@
         <link refid="struct_performance_result"/>
       </node>
     </collaborationgraph>
-    <location file="src/calculatorapp/src/calculatorapp.cpp" line="36" column="1" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="36" bodyend="42"/>
+    <location file="src/calculatorapp/src/calculatorapp.cpp" line="40" column="1" bodyfile="src/calculatorapp/src/calculatorapp.cpp" bodystart="40" bodyend="46"/>
     <listofallmembers>
       <member refid="struct_performance_result_1a9cf6211ffa7e0af3a539065f7c32757e" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>error</name></member>
       <member refid="struct_performance_result_1a0657a45653a18e8386b6b87cf5000a8e" prot="public" virt="non-virtual"><scope>PerformanceResult</scope><name>numPoints</name></member>

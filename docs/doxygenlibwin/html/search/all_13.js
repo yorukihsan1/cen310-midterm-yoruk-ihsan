@@ -6,5 +6,6 @@ var searchData=
   ['step_203_20only_20windows_3',['Step-3 (Only Windows)',['../index.html#autotoc_md6',1,'']]],
   ['step_204_20only_20windows_4',['Step-4 (Only Windows)',['../index.html#autotoc_md7',1,'']]],
   ['step_205_20only_20wsl_5',['Step-5 (Only WSL)',['../index.html#autotoc_md8',1,'']]],
-  ['supported_20platforms_6',['Supported Platforms',['../index.html#autotoc_md13',1,'']]]
+  ['subtract_6',['subtract',['../class_coruh_1_1_calculator_1_1_calculator.html#ad8a28a8b990342d4bfde65ab85ec7596',1,'Coruh::Calculator::Calculator']]],
+  ['supported_20platforms_7',['Supported Platforms',['../index.html#autotoc_md13',1,'']]]
 ];

@@ -10,27 +10,34 @@
 \DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <random>}}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_coruh}{Coruh}}}
-\DoxyCodeLine{00024\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator}{Calculator}}}
-\DoxyCodeLine{00026\ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator}{Calculator}}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d}{calculatePiSequential}}(\textcolor{keywordtype}{int}\ numPoints);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827}{calculatePiParallel}}(\textcolor{keywordtype}{int}\ numPoints,\ \textcolor{keywordtype}{int}\ numThreads);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::pair<double,\ double>>\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}{generatePoints}}(\textcolor{keywordtype}{int}\ numPoints);}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<double>\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}{calculateConvergence}}(\textcolor{keyword}{const}\ std::vector<std::pair<double,\ double>>\&\ points);}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}{isInsideCircle}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00122\ \ \ \ \ \}}
-\DoxyCodeLine{00123\ \}}
-\DoxyCodeLine{00124\ }
-\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CALCULATOR\_H}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_coruh}{Coruh}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator}{Calculator}}\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator}{Calculator}}\ \{}
+\DoxyCodeLine{00043\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a95954262561d64409511bf3ffb67c91e}{isInsideCircle}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a6d274e26b1770093789c36aaad506a6d}{calculatePiSequential}}(\textcolor{keywordtype}{int}\ numPoints);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ae9a7a58d7af01882779193d78a792827}{calculatePiParallel}}(\textcolor{keywordtype}{int}\ numPoints,\ \textcolor{keywordtype}{int}\ numThreads);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{static}\ std::vector<std::pair<double,\ double>>\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_aa3972791132e2b100c5ee7922ef1ab42}{generatePoints}}(\textcolor{keywordtype}{int}\ numPoints);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{keyword}{static}\ std::vector<double>\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a15dc73242c4e8713e38731812d74bd06}{calculateConvergence}}(\textcolor{keyword}{const}\ std::vector<std::pair<double,\ double>>\ \&points);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a54ca827c4b408c795576d48503eee6aa}{add}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_ad8a28a8b990342d4bfde65ab85ec7596}{subtract}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a319373a53b4e84f92c207e4f7bb9dfce}{multiply}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00149\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_coruh_1_1_calculator_1_1_calculator_a7da73cdbcc434a4f28d614f7f036b74a}{divide}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00152\ \ \ \textcolor{comment}{//\ ...\ existing\ code\ ...}}
+\DoxyCodeLine{00153\ \};}
+\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CALCULATOR\_H}}
 
 \end{DoxyCode}

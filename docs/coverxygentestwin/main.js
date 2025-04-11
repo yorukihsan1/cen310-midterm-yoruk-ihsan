@@ -213,14 +213,14 @@ var assemblies = [
   {
     "name": "Default",
     "classes": [
-      { "name": "C:\\Users\\yoruk\\Desktop\\cen310-midterm-yoruk-ihsan\\src\\tests\\calculator\\calculator_test.cpp", "rp": "C__Users_yoruk_Desktop_cen310_midterm_yoruk_ihsan_src_tests_calculator_calculator_test.cpp.html", "cl": 1, "ucl": 10, "cal": 11, "tl": 57, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [9], "bch": [], "mch": [], "mfch": [], "hc": [{ "et": "12.04.2025 - 00:31:13", "cl": 1, "ucl": 10, "cal": 11, "tl": 57, "lcq": 9, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }], "metrics": { } },
-      { "name": "C:\\Users\\yoruk\\Desktop\\cen310-midterm-yoruk-ihsan\\src\\tests\\utility\\utility_test.cpp", "rp": "C__Users_yoruk_Desktop_cen310_midterm_yoruk_ihsan_src_tests_utility_utility_test.cpp.html", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [6.6], "bch": [], "mch": [], "mfch": [], "hc": [{ "et": "12.04.2025 - 00:31:13", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "lcq": 6.6, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }], "metrics": { } },
+      { "name": "C:\\Users\\yoruk\\Desktop\\cen310-midterm-yoruk-ihsan\\src\\tests\\calculator\\calculator_test.cpp", "rp": "C__Users_yoruk_Desktop_cen310_midterm_yoruk_ihsan_src_tests_calculator_calculator_test.cpp.html", "cl": 0, "ucl": 15, "cal": 15, "tl": 89, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [9,0], "bch": [], "mch": [], "mfch": [], "hc": [{ "et": "12.04.2025 - 00:31:13", "cl": 1, "ucl": 10, "cal": 11, "tl": 57, "lcq": 9, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 01:44:09", "cl": 1, "ucl": 10, "cal": 11, "tl": 57, "lcq": 9, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 02:22:50", "cl": 0, "ucl": 15, "cal": 15, "tl": 89, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 02:23:25", "cl": 0, "ucl": 15, "cal": 15, "tl": 89, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }], "metrics": { } },
+      { "name": "C:\\Users\\yoruk\\Desktop\\cen310-midterm-yoruk-ihsan\\src\\tests\\utility\\utility_test.cpp", "rp": "C__Users_yoruk_Desktop_cen310_midterm_yoruk_ihsan_src_tests_utility_utility_test.cpp.html", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [6.6], "bch": [], "mch": [], "mfch": [], "hc": [{ "et": "12.04.2025 - 00:31:13", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "lcq": 6.6, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 01:44:09", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "lcq": 6.6, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 02:22:50", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "lcq": 6.6, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }, { "et": "12.04.2025 - 02:23:25", "cl": 1, "ucl": 14, "cal": 15, "tl": 134, "lcq": 6.6, "cb": 0, "tb": 0, "bcq": 0, "cm": 0, "fcm": 0, "tm": 0, "mcq": 0, "mfcq": 0 }], "metrics": { } },
     ]},
 ];
 
 var metrics = [];
 
-var historicCoverageExecutionTimes = [];
+var historicCoverageExecutionTimes = ["12.04.2025 - 02:22:50", "12.04.2025 - 01:44:09", "12.04.2025 - 00:31:13"];
 
 var riskHotspotMetrics = [
 ];

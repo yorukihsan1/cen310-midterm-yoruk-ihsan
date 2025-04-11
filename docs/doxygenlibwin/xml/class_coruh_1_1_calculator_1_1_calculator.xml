@@ -4,6 +4,73 @@
     <compoundname>Coruh::Calculator::Calculator</compoundname>
     <includes refid="calculator_8h" local="no">calculator.h</includes>
     <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Calculator::isInsideCircle</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>isInsideCircle</name>
+        <qualifiedname>Coruh::Calculator::Calculator::isInsideCircle</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a point lies inside the unit circle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a point lies inside the unit circle.</para>
+<para>This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if point is inside the circle, false otherwise</para>
+</simplesect>
+<simplesect kind="note"><para>A point is inside the unit circle if x^2 + y^2 &lt;= 1.</para>
+</simplesect>
+This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if point is inside the circle, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="56" column="15" bodyfile="src/calculator/src/calculator.cpp" bodystart="150" bodyend="152"/>
+      </memberdef>
       <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double Calculator::calculatePiSequential</definition>
@@ -49,7 +116,7 @@ This function implements the sequential version of the Monte Carlo method. It ge
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculator/header/calculator.h" line="60" column="27" bodyfile="src/calculator/src/calculator.cpp" bodystart="45" bodyend="56"/>
+        <location file="src/calculator/header/calculator.h" line="71" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="46" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -116,7 +183,7 @@ This function implements the parallel version of the Monte Carlo method. It dist
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculator/header/calculator.h" line="76" column="27" bodyfile="src/calculator/src/calculator.cpp" bodystart="68" bodyend="89"/>
+        <location file="src/calculator/header/calculator.h" line="87" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="69" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
@@ -163,7 +230,7 @@ This function generates random points in a 2x2 square centered at the origin. Th
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculator/header/calculator.h" line="90" column="32" bodyfile="src/calculator/src/calculator.cpp" bodystart="100" bodyend="113"/>
+        <location file="src/calculator/header/calculator.h" line="101" column="22" bodyfile="src/calculator/src/calculator.cpp" bodystart="100" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; double &gt;</type>
@@ -210,76 +277,184 @@ This function analyzes how the Pi approximation converges as more points are pro
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculator/header/calculator.h" line="105" column="32" bodyfile="src/calculator/src/calculator.cpp" bodystart="124" bodyend="138"/>
+        <location file="src/calculator/header/calculator.h" line="116" column="22" bodyfile="src/calculator/src/calculator.cpp" bodystart="123" bodyend="138"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Calculator::isInsideCircle</definition>
-        <argsstring>(double x, double y)</argsstring>
-        <name>isInsideCircle</name>
-        <qualifiedname>Coruh::Calculator::Calculator::isInsideCircle</qualifiedname>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a54ca827c4b408c795576d48503eee6aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::add</definition>
+        <argsstring>(double a, double b)</argsstring>
+        <name>add</name>
+        <qualifiedname>Coruh::Calculator::Calculator::add</qualifiedname>
         <param>
           <type>double</type>
-          <declname>x</declname>
+          <declname>a</declname>
         </param>
         <param>
           <type>double</type>
-          <declname>y</declname>
+          <declname>b</declname>
         </param>
         <briefdescription>
-<para>Checks if a point lies inside the unit circle. </para>
         </briefdescription>
         <detaileddescription>
-<para>Checks if a point lies inside the unit circle.</para>
-<para>This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
-<para><parameterlist kind="param"><parameteritem>
+<para>Adds two numbers. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>x</parametername>
+<parametername>a</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>X coordinate of the point. </para>
+<para>First number </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>y</parametername>
+<parametername>b</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Y coordinate of the point. </para>
+<para>Second number </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true if point is inside the circle, false otherwise.</para>
-</simplesect>
-<simplesect kind="note"><para>A point is inside the unit circle if x^2 + y^2 &lt;= 1.</para>
-</simplesect>
-This function determines if a given point (x,y) lies inside the unit circle (radius 1) centered at the origin.</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>x</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>X coordinate of the point </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>y</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Y coordinate of the point </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>true if point is inside the circle, false otherwise </para>
+<simplesect kind="return"><para>Sum of a and b </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/calculator/header/calculator.h" line="120" column="25" bodyfile="src/calculator/src/calculator.cpp" bodystart="150" bodyend="152"/>
+        <location file="src/calculator/header/calculator.h" line="124" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1ad8a28a8b990342d4bfde65ab85ec7596" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::subtract</definition>
+        <argsstring>(double a, double b)</argsstring>
+        <name>subtract</name>
+        <qualifiedname>Coruh::Calculator::Calculator::subtract</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subtracts second number from first number. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference of a and b </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="132" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a319373a53b4e84f92c207e4f7bb9dfce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::multiply</definition>
+        <argsstring>(double a, double b)</argsstring>
+        <name>multiply</name>
+        <qualifiedname>Coruh::Calculator::Calculator::multiply</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiplies two numbers. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product of a and b </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="140" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coruh_1_1_calculator_1_1_calculator_1a7da73cdbcc434a4f28d614f7f036b74a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Calculator::divide</definition>
+        <argsstring>(double a, double b)</argsstring>
+        <name>divide</name>
+        <qualifiedname>Coruh::Calculator::Calculator::divide</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Divides first number by second number. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient of a and b </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if b is zero </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/calculator/header/calculator.h" line="149" column="17" bodyfile="src/calculator/src/calculator.cpp" bodystart="29" bodyend="35"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -301,13 +476,17 @@ This function determines if a given point (x,y) lies inside the unit circle (rad
         <link refid="class_coruh_1_1_calculator_1_1_calculator"/>
       </node>
     </collaborationgraph>
-    <location file="src/calculator/header/calculator.h" line="44" column="9" bodyfile="src/calculator/header/calculator.h" bodystart="45" bodyend="121"/>
+    <location file="src/calculator/header/calculator.h" line="42" column="1" bodyfile="src/calculator/header/calculator.h" bodystart="42" bodyend="153"/>
     <listofallmembers>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a54ca827c4b408c795576d48503eee6aa" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>add</name></member>
       <member refid="class_coruh_1_1_calculator_1_1_calculator_1a15dc73242c4e8713e38731812d74bd06" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculateConvergence</name></member>
       <member refid="class_coruh_1_1_calculator_1_1_calculator_1ae9a7a58d7af01882779193d78a792827" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculatePiParallel</name></member>
       <member refid="class_coruh_1_1_calculator_1_1_calculator_1a6d274e26b1770093789c36aaad506a6d" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>calculatePiSequential</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a7da73cdbcc434a4f28d614f7f036b74a" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>divide</name></member>
       <member refid="class_coruh_1_1_calculator_1_1_calculator_1aa3972791132e2b100c5ee7922ef1ab42" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>generatePoints</name></member>
-      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="private" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>isInsideCircle</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a95954262561d64409511bf3ffb67c91e" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>isInsideCircle</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1a319373a53b4e84f92c207e4f7bb9dfce" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>multiply</name></member>
+      <member refid="class_coruh_1_1_calculator_1_1_calculator_1ad8a28a8b990342d4bfde65ab85ec7596" prot="public" virt="non-virtual"><scope>Coruh::Calculator::Calculator</scope><name>subtract</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

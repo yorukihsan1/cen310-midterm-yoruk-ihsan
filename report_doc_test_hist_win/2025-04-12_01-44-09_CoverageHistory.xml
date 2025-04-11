@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-04-12_01-44-09" tag="">
+  <assembly name="Default">
+    <class name="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\calculator\calculator_test.cpp" coveredlines="1" coverablelines="11" totallines="57" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\yoruk\Desktop\cen310-midterm-yoruk-ihsan\src\tests\utility\utility_test.cpp" coveredlines="1" coverablelines="15" totallines="134" coveredbranches="0" totalbranches="0" coveredcodeelements="0" fullcoveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

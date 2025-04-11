@@ -1,57 +1,91 @@
-//#define ENABLE_CALCULATOR_TEST  // Uncomment this line to enable the Calculator tests
-
 #include "gtest/gtest.h"
-#include "../../calculator/header/calculator.h"  // Adjust this include path based on your project structure
+#include "../../calculator/header/calculator.h"
 
 using namespace Coruh::Calculator;
 
 class CalculatorTest : public ::testing::Test {
-protected:
-	void SetUp() override {
-		// Setup test data
-	}
+ protected:
+  void SetUp() override {}
 
-	void TearDown() override {
-		// Clean up test data
-	}
+  void TearDown() override {}
 };
 
+// === Test: Basic Arithmetic Operations ===
 TEST_F(CalculatorTest, TestAdd) {
-	double result = Calculator::add(5.0, 3.0);
-	EXPECT_DOUBLE_EQ(result, 8.0);
+  EXPECT_DOUBLE_EQ(Calculator::add(2.0, 3.0), 5.0);
+  EXPECT_DOUBLE_EQ(Calculator::add(-2.0, 3.0), 1.0);
+  EXPECT_DOUBLE_EQ(Calculator::add(0.0, 0.0), 0.0);
 }
 
 TEST_F(CalculatorTest, TestSubtract) {
-	double result = Calculator::subtract(5.0, 3.0);
-	EXPECT_DOUBLE_EQ(result, 2.0);
+  EXPECT_DOUBLE_EQ(Calculator::subtract(5.0, 3.0), 2.0);
+  EXPECT_DOUBLE_EQ(Calculator::subtract(-2.0, 3.0), -5.0);
+  EXPECT_DOUBLE_EQ(Calculator::subtract(0.0, 0.0), 0.0);
 }
 
 TEST_F(CalculatorTest, TestMultiply) {
-	double result = Calculator::multiply(5.0, 3.0);
-	EXPECT_DOUBLE_EQ(result, 15.0);
+  EXPECT_DOUBLE_EQ(Calculator::multiply(2.0, 3.0), 6.0);
+  EXPECT_DOUBLE_EQ(Calculator::multiply(-2.0, 3.0), -6.0);
+  EXPECT_DOUBLE_EQ(Calculator::multiply(0.0, 5.0), 0.0);
 }
 
 TEST_F(CalculatorTest, TestDivide) {
-	double result = Calculator::divide(6.0, 3.0);
-	EXPECT_DOUBLE_EQ(result, 2.0);
+  EXPECT_DOUBLE_EQ(Calculator::divide(6.0, 2.0), 3.0);
+  EXPECT_DOUBLE_EQ(Calculator::divide(-6.0, 2.0), -3.0);
+  EXPECT_DOUBLE_EQ(Calculator::divide(0.0, 5.0), 0.0);
+  EXPECT_THROW(Calculator::divide(5.0, 0.0), std::invalid_argument);
 }
 
-TEST_F(CalculatorTest, TestDivideByZero) {
-	EXPECT_THROW(Calculator::divide(5.0, 0.0), std::invalid_argument);
+// === Test: isInsideCircle ===
+TEST_F(CalculatorTest, TestIsInsideCircle) {
+  // Points on the circle (x^2 + y^2 = 1)
+  EXPECT_TRUE(Calculator::isInsideCircle(1.0, 0.0));
+  EXPECT_TRUE(Calculator::isInsideCircle(0.0, 1.0));
+  EXPECT_FALSE(Calculator::isInsideCircle(1.0, 1.0));
+  EXPECT_TRUE(Calculator::isInsideCircle(0.5, 0.5));
+  EXPECT_FALSE(Calculator::isInsideCircle(1.1, 0.0));
 }
 
-/**
- * @brief The main function of the test program.
- *
- * @param argc The number of command-line arguments.
- * @param argv An array of command-line argument strings.
- * @return int The exit status of the program.
- */
+// === Test: generatePoints ===
+TEST_F(CalculatorTest, TestGeneratePointsSizeAndRange) {
+  int numPoints = 1000;
+  auto points = Calculator::generatePoints(numPoints);
+  EXPECT_EQ(points.size(), numPoints);
+
+  for (const auto& p : points) {
+    EXPECT_GE(p.first, -1.0);
+    EXPECT_LE(p.first, 1.0);
+    EXPECT_GE(p.second, -1.0);
+    EXPECT_LE(p.second, 1.0);
+  }
+}
+
+// === Test: calculatePiSequential ===
+TEST_F(CalculatorTest, TestCalculatePiSequential) {
+  double pi = Calculator::calculatePiSequential(100000);
+  EXPECT_NEAR(pi, 3.1415, 0.05);  // Monte Carlo 0.05 tolerans
+}
+
+// === Test: calculatePiParallel ===
+TEST_F(CalculatorTest, TestCalculatePiParallel) {
+  double pi = Calculator::calculatePiParallel(100000, 4);
+  EXPECT_NEAR(pi, 3.1415, 0.05);
+}
+
+// === Test: calculateConvergence ===
+TEST_F(CalculatorTest, TestCalculateConvergence) {
+  auto points = Calculator::generatePoints(10000);
+  auto convergence = Calculator::calculateConvergence(points);
+  EXPECT_GT(convergence.size(), 5);  // 10000/1000 = 10 veri noktas beklenir
+
+  for (double piVal : convergence) {
+    EXPECT_GT(piVal, 2.5);
+    EXPECT_LT(piVal, 4.0);
+  }
+}
+
+// === Main ===
 int main(int argc, char** argv) {
-#ifdef ENABLE_CALCULATOR_TEST
-	::testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
-#else
-	return 0;
-#endif
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
